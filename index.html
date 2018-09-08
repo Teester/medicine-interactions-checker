@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+	<div id="title">Medication Interaction Checker</div>
+	<div id="content">
+		<form id="container" autocomplete="off"></form>
+		<button class="button" onclick="checkInteractions()">Check interactions</button>
+		<button class="button" onclick="addAnotherDrug()">Add another drug</button>
+		<div id="interaction">
+			<div class="interaction_title" id="serum_concentration_title" style="display:none;">Interactions affecting serum concentration:</div>
+			<ul class="interaction_list" id="serum_concentration"/></ul>
+			<div class="interaction_title" id="metabolism_title" style="display:none;">Interactions affecting metabolism:</div>
+			<ul class="interaction_list" id="metabolism"/></ul>
+			<div class="interaction_title" id="adverse_effects_title" style="display:none;">Interactions altering adverse effects:</div>
+			<ul class="interaction_list" id="adverse_effects"/></ul>
+			<div class="interaction_title" id="therapeutic_efficacy_title" style="display:none;">Interactions altering therapeutic efficacy:</div>
+			<ul class="interaction_list" id="therapeutic_efficacy"/></ul>
+			<div class="interaction_title" id="antihypertensive_title" style="display:none;">Interactions affecting hypotensive effects:</div>
+			<ul class="interaction_list" id="antihypertensive"/></ul>
+			<div class="interaction_title" id="hypoglycemic_title" style="display:none;">Interactions affecting hypoglycemic effects:</div>
+			<ul class="interaction_list" id="hypoglycemic"/></ul>
+			<div class="interaction_title" id="qt_title" style="display:none;">Interactions affecting the QT interval:</div>
+			<ul class="interaction_list" id="qt"/></ul>
+			<div class="interaction_title" id="other_title" style="display:none;">Other interactions:</div>
+			<ul class="interaction_list" id="other"></ul>
+		</div>
+	</div>
+	<div id="licence"/>
+</body>
+</html>
+
