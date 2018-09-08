@@ -1,0 +1,105 @@
+:root {
+	--highlight-background: #1E90FF;
+	--highlight-text: #FFFFFF;
+	--lowlight-background: #EFEFEF;
+	--border-color: #D4D4D4;
+}
+
+body {
+	font-family: ubuntu;
+	padding: 0px;
+	margin: 0px;
+}
+
+.button {
+	background-color: var(--highlight-background);
+	color: var(--highlight-text);
+	padding: 10px;
+	border: none;
+	margin:10px;
+	border-radius:5px;
+}
+
+.drugbutton {
+	background-color: var(--highlight-background);
+	color: var(--highlight-text);
+	width: 20px;
+	height:20px;
+	padding:0px;
+	margin:0px;
+	text-align: center;
+	border-radius: 10px;
+	border: none;
+}
+
+#title {
+	font-size:150%;
+	padding:20px;
+	text-align: center;
+	background-color: var(--highlight-background);
+	color: var(--highlight-text);
+}
+
+#container {
+	margin:10px;
+	padding:10px;
+}
+
+#content {
+	padding-bottom: 100px;
+}
+
+#licence {
+	font-size: 75%;
+	text-align: center;
+	position: fixed;
+	bottom: 0px;
+	padding: 20px;
+	background-color: var(--lowlight-background);
+}
+
+.interaction_title {
+	padding-left: 10px;
+	font-weight: bold;
+}
+
+.numberOfInteractions {
+	font-weight: bold;
+}
+
+.drug {
+	padding: 5px;
+	margin-top: 10px;
+}
+
+.autocomplete {
+  position: relative;
+  display: block;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid var(--border-color);
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: var(--highlight-text);
+  border-bottom: 1px solid var(--border-color);
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color:var(--lowlight-background);
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: var(--highlight-background)  !important;
+  color: var(--highlight-text);
+}
