@@ -1,5 +1,5 @@
 function queryInteractions() {
-	rxcuis = "";
+	var rxcuis = "";
 	var titles = document.getElementsByClassName("interaction_title");
 	for (var title = 0; title < titles.length; title++) {
 		titles[title].style.display = "none";
@@ -47,7 +47,7 @@ function analyseInteractions(data) {
 					["hypoglycemic", "hypoglycemic"],
 					["QTc", "qt"]
 				]
-				for (a in interactionType) {
+				for (var a in interactionType) {
 					if (interactionPair.match(interactionType[a][0])) {
 						type = interactionType[a][1];
 					}
@@ -73,7 +73,7 @@ function analyseInteractions(data) {
 
 function processInteractionList(interactionList) {
 	var interactionCount = getInteractionCounts(interactionList);
-	var interactionEffects = getInteractionEffects(interactionList);
+	//var interactionEffects = getInteractionEffects(interactionList);
 	// Add the number of interactions to the document
 	var innerHTML = "";
 	for (var i in interactionCount) {
@@ -88,7 +88,7 @@ function processInteractionList(interactionList) {
 	// Add the list of interactions to the document
 	for (var k = 0; k < interactionList.length; k++) {
 		var interactionHTML = "<li class='interaction'>" + interactionList[k][1] + "</li>";
-		document.getElementById(interactionList[k][0]).innerHTML += interactionHTML;;
+		document.getElementById(interactionList[k][0]).innerHTML += interactionHTML;
 		
 	}
 	
@@ -180,7 +180,7 @@ function addAnotherDrug() {
 	div.appendChild(input);
 	// Add a delete button
 	if (newInputId != "drug1" && newInputId != "drug2") {
-		button = "<button class='drugbutton' id='" + newInputId + "button" + "' onClick='removeDrug(this.id)'>X</button>";
+		var button = "<button class='drugbutton' id='" + newInputId + "button" + "' onClick='removeDrug(this.id)'>X</button>";
 		div.innerHTML += button;
 		//Focus the cursor on the new input field
 		document.getElementById(newInputId).focus();
@@ -193,7 +193,7 @@ function addAnotherDrug() {
 }
 
 function checkInteractions() {
-	drugArray = [];
+	var drugArray = [];
 	var classes = document.getElementsByClassName("drug");
 	for (var element in classes) {
 		if (classes[element].value) {
@@ -301,7 +301,7 @@ function autocomplete(inp, arr) {
 					/*insert a input field that will hold the current array item's value:*/
 					b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
 					/*execute a function when someone clicks on the item value (DIV element):*/
-					b.addEventListener("click", function(e) {
+					b.addEventListener("click", function(f) {
 						/*insert the value for the autocomplete text field:*/
 						inp.value = this.getElementsByTagName("input")[0].value.toLowerCase();
 						/*close the list of autocompleted values,
