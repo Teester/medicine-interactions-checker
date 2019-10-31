@@ -193,7 +193,7 @@ function addAnotherDrug() {
 }
 
 function checkInteractions() {
-	var drugArray = [];
+	var nameArray = [];
 	var classes = document.getElementsByClassName("drug");
 	for (var element in classes) {
 		if (classes[element].value) {
@@ -258,7 +258,7 @@ function getDisplayNames() {
 }
 
 function setAutocompletes() {
-	inputs = document.getElementsByClassName("drug");
+	var inputs = document.getElementsByClassName("drug");
 	for (var i = 0; i < inputs.length; i++) {
 		autocomplete(inputs[i], displaynames);
 	}
