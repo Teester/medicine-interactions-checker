@@ -193,7 +193,6 @@ function addAnotherDrug() {
 }
 
 function checkInteractions() {
-	var nameArray = [];
 	var classes = document.getElementsByClassName("drug");
 	for (var element in classes) {
 		if (classes[element].value) {
